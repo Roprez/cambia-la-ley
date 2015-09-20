@@ -21,7 +21,7 @@ Instala el resto de los paquetes listados en ``package.json`` ejecutando `sudo n
 3. Instalar grunt `npm install grunt` y `npm install grunt-core`
 
 ##Configuración
-El proyecto requiere de variables de entorno para utilizar la base datos y la autenticación mediante Twitter.
+El proyecto requiere de variables de entorno para utilizar la base de datos y la autenticación mediante Twitter.
 
 ###Base de datos
 Por defecto, el proyecto utiliza PostgreSQL. La conexión a la base de datos se configura en ``config/connections.js``.
@@ -37,7 +37,7 @@ postgresql: {
 }
 ```
 El nombre de esta configuración es ``postgresql`` y utiliza el módulo  ``sails-postgresql`` (instalado anteriormente).
-El resto de las variables deben de estar definiadas en el entorno de su servidor. Por ejemplo, si el servidor es Heroku,
+El resto de las variables deben de estar definidas en el entorno de su servidor. Por ejemplo, si el servidor es Heroku,
 deberá de definir las variables ``PG_HOST``, ``PG_PORT``, etc. con los datos pertinentes de su base de datos, en la página de "Settings" en el apartado de "Config Vars" de su aplicación.
 
 Para hacer uso de una de las múltiples configuraciones en ``config/connections.js``, el nombre de ésta se debe de especificar en ``config/models.js``, en el atributo ``connection``:
@@ -50,7 +50,7 @@ module.exports.models = {
 IMPORTANTE: el atributo ``migrate`` puede tomar 3 valores:
 - ``safe``: No habrá modificaciones a la estructura de la base de datos, aunque los modelos hayan sido modificados.
 - ``alter``: La información de la base de datos se mantendrá. Su estructura se modificará de acuerdo a los modelos (función experimental).
-- ``drop``: Cada que se reinicie el proyecto, la infromación en la base de datos se perderá. Su estructura se modificará de acuerdo a los modelos.
+- ``drop``: Cada que se reinicie el proyecto, la información en la base de datos se perderá. Su estructura se modificará de acuerdo a los modelos.
 Se recomienda leer la [documentación oficial] (http://sailsjs.org/#/documentation/concepts/ORM/model-settings.html).
 
 ###Twitter OAuth
